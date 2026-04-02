@@ -22,23 +22,30 @@ Before you begin, ensure you have the following installed on your system:
 ```bash
 git clone [https://github.com/yourusername/zygos-api.git](https://github.com/yourusername/zygos-api.git)
 cd zygos-api
-2. Set up the Python Virtual Environment
-It's recommended to isolate your Python dependencies.
+```
 
+**2. Set up the Python Virtual Environment**
+It's recommended to isolate your Python dependencies.
+```
 Bash
 python -m venv venv
 source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-3. Install Dependencies
+```
 
+**3. Install Dependencies**
+```
 Bash
 pip install fastapi uvicorn requests
 (Note: If you have a requirements.txt, use pip install -r requirements.txt instead).
+```
 
-4. Spin up the Ollama Container
+**4. Spin up the Ollama Container**
 Start the local AI engine using Podman. Make sure your desired model is pulled and ready.
-
+```
 Bash
 podman run -d -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama
+```
+
 ⚙️ Running the Service
 You will need two separate terminal windows for this step.
 
@@ -61,7 +68,7 @@ You can test the API by sending a POST request to the ngrok URL.
 
 Using cURL:
 Replace <YOUR_NGROK_URL> with your actual forwarding address.
-
+```
 Bash
 curl -X POST "<YOUR_NGROK_URL>/analyze" \
      -H "Content-Type: application/json" \
@@ -73,6 +80,7 @@ JSON
   "verdict": "The model's generated response goes here...",
   "status": "success"
 }
+```
 🛑 Stopping the Environment
 When you are done, you can cleanly shut down the environment:
 
