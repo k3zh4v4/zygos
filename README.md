@@ -5,7 +5,7 @@ Zygos is a lightweight, containerized API service that leverages a local AI mode
 ## 🚀 Architecture overview
 * **Web Framework:** FastAPI (Python)
 * **Containerization:** Podman
-* **AI Engine:** Ollama (Local LLM)
+* **AI Engine:** ollama - **gemma3** 4B parameters (Local SLM)
 * **Tunneling:** ngrok
 
 ## 📋 Prerequisites
