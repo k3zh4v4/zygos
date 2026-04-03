@@ -1,6 +1,10 @@
 # Zygos API
 
-Zygos is a lightweight, containerized API service that leverages a local AI model to provide intelligent verdicts on text content. Built with FastAPI for high performance, it runs its AI inference via an Ollama model hosted in a Podman container, and uses ngrok to securely expose the local endpoint to the web.
+Zygos is a lightweight, containerized API service that leverages a local AI model to provide intelligent verdicts on text content. Built with FastAPI for high performance, it runs its AI inference via an Ollama model (gemma3 - 4 Billion parameters) hosted in a Podman container, and uses ngrok to securely expose the local endpoint to the web.
+
+```
+I have particulary used gemma3 because of its intelligent classification compared to other slms like qwen or llama and support of over 100+ languages which is great when i think about analyzing spam samples by being multilinguistic
+```
 
 ## 🚀 Architecture overview
 * **Web Framework:** FastAPI (Python)
