@@ -12,13 +12,14 @@ I have preffered gemma3 [even though gemma4 just released during this writing we
 * **AI Engine:** ollama - **gemma3** 4B parameters (Local SLM)
 * **Tunneling:** ngrok
 
+
 ## 📋 Prerequisites
 
 Before you begin, ensure you have the following installed on your system:
 * [Python 3.8+](https://www.python.org/downloads/)
 * [Podman](https://podman.io/getting-started/installation)
 * [ngrok](https://ngrok.com/download)
-* An active ngrok account/authtoken
+
 
 ## 🛠️ Installation & Setup
 
