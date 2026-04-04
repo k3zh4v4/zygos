@@ -3,13 +3,14 @@
 Zygos is a lightweight, containerized API service that leverages a local AI model to provide intelligent verdicts on text content. Built with FastAPI for high performance, it runs its AI inference via an Ollama model (gemma3 - 4 Billion parameters) hosted in a Podman container, and uses ngrok to securely expose the local endpoint to the web.
 
 
-I have preffered gemma3 [even though gemma4 just released during this writing we can still use gemma4 to analyze spam images] because of its intelligent classification compared to other slms like llama or qwen and support of over 140 languages which is great when i think about analyzing spam samples by being multilinguistic :)
+I have preffered gemma3 [even though gemma4 just released during this writing we can still use gemma4 to analyze spam images] because of its intelligent classification compared to other slms like llama or qwen and support of over 100+ languages which is great when i think about analyzing spam samples by being multilinguistic :)
 
 
 ## 🚀 Architecture overview
 * **Web Framework:** FastAPI (Python)
 * **Containerization:** Podman
-* **AI Engine:** ollama - **gemma3** 4B parameters (Local SLM)
+* **AI Engine:** ollama
+* **SLM Model** gemma3 (4B paramaters)
 * **Tunneling:** ngrok
 
 
@@ -40,8 +41,7 @@ source venv/bin/activate  # On Windows use `venv\Scripts\activate`
 **3. Install Dependencies**
 ```
 Bash
-pip install fastapi uvicorn requests
-(Note: If you have a requirements.txt, use pip install -r requirements.txt instead).
+use pip install -r requirements.txt [The requirements file is provided in the same main branch]
 ```
 
 **4. Spin up the Ollama Container**
